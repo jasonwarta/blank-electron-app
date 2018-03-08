@@ -1,0 +1,34 @@
+{
+  "name": "electron-sandbox",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/electron-prebuilt/dist/electron .",
+    "watch": "./node_modules/.bin/webpack-dev-server",
+    "electron-rebuild": "./node_modules/.bin/electron-rebuild"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "electron-packager": "^11.1.0",
+    "electron-rebuild": "^1.7.3",
+    "glob": "^7.1.2",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
+    "node-libs-browser": "^2.1.0",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
