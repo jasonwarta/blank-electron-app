@@ -1,3 +1,8 @@
+// main.js
+// 
+// loosely based on an official electron example at 
+// https://github.com/electron/electron-api-demos/blob/master/main.js
+
 const path = require('path');
 const glob = require('glob');
 const { app, BrowserWindow } = require('electron');
