@@ -8,4 +8,7 @@ yarn watch
 
 # launch electron app
 yarn start
+
+# build electron app for distribution
+yarn dist
 ```

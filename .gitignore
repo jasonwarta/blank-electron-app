@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# other project-specific files
+dist/
+public/bundle.js

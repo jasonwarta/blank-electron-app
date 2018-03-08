@@ -1,12 +1,16 @@
 {
-  "name": "electron-sandbox",
+  "name": "blank-electron-app",
   "version": "1.0.0",
   "main": "main.js",
   "license": "MIT",
+  "description": "blank-electron-app",
+  "author": "Your Name <you@example.com>",
   "scripts": {
     "start": "./node_modules/electron-prebuilt/dist/electron .",
-    "watch": "./node_modules/.bin/webpack-dev-server",
-    "electron-rebuild": "./node_modules/.bin/electron-rebuild"
+    "watch": "./node_modules/.bin/webpack --watch",
+    "electron-rebuild": "./node_modules/.bin/electron-rebuild",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -15,8 +19,10 @@
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.10",
+    "electron-builder": "^20.4.0",
     "electron-packager": "^11.1.0",
     "electron-rebuild": "^1.7.3",
+    "electron-prebuilt": "^1.4.13",
     "glob": "^7.1.2",
     "less": "^3.0.1",
     "less-loader": "^4.0.6",
@@ -27,8 +33,33 @@
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
-    "electron-prebuilt": "^1.4.13",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "build": {
+    "appId": "blank-electron-app",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS"
+    }
   }
 }
